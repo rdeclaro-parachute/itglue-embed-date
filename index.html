@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>60 Days Ago</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 10px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h3>60 Days Ago From Today:</h3>
+  <p id="dateDisplay"></p>
+
+  <script>
+    const today = new Date();
+    const pastDate = new Date();
+    pastDate.setDate(today.getDate() - 60);
+    const formatted = pastDate.toISOString().split('T')[0];
+    document.getElementById('dateDisplay').innerText = formatted;
+  </script>
+</body>
+</html>
